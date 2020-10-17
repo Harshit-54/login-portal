@@ -1,23 +1,23 @@
 # login-portal
-A login portal on express.js with mongodb as database.
-Hosted on http://13.234.119.154:3000/
+A login portal on express.js with mongodb as database.<br />
+Hosted on http://13.234.119.154:3000/<br />
 with <br />
-super admin credentials
-  -email : admin@admin.com
-  -password : admin
-Other admin credentials
-  -email : test@test.com
-  -password : test
+super admin credentials<br />
+  -email : admin@admin.com<br />
+  -password : admin<br />
+Other admin credentials<br />
+  -email : test@test.com<br />
+  -password : test<br />
 
-Database - MongoDB
+Database - MongoDB<br />
 
-Database schema 
-{
-  firstname : string,
-  lastname : string,
-  password : string,
-  email : string,
-  role : string,
-  actions : int32
-}
+Database schema <br />
+{<br />
+  firstname : string,<br />
+  lastname : string,<br />
+  password : string,<br />
+  email : string,<br />
+  role : string,<br />
+  actions : int32<br />
+}<br />
 
