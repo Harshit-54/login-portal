@@ -5,11 +5,11 @@ Database - MongoDB
 
 Database schema 
 {
-  firstname : <string>,
-  lastname : <string>,
-  password : <string>,
-  email : <string>,
-  role : <string>,
-  actions : <int32>
+  firstname : string,
+  lastname : string,
+  password : string,
+  email : string,
+  role : string,
+  actions : int32
 }
 
