@@ -62,12 +62,13 @@ It renders the user-list.ejs file, allows to post an insert new admin request.<b
 
 
 <H3>View Data - Non-Admin</H3>
-Used to retrieve data from the database of current admins using query,<br />
 
-  const collection = client.db("loginlist").collection("adminlist");<br />
-  var cursor = collection.find();				<br />
-  cursor.forEach(function(document,error){});
- <br />
+Used to retrieve data from the database of current admins using query.<br />
+
+const collection = client.db("loginlist").collection("adminlist");<br />
+var cursor = collection.find();				<br />
+cursor.forEach(function(document,error){});<br />
+
 It renders the user-list-view.ejs file
 
 
