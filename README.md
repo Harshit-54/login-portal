@@ -28,19 +28,47 @@ API features
 
 Authentication
 This authenticates the user, using post method,
-```app.post('/auth', function(request, response) {});```
-HTTP POST request parameter
-OBJECT - DESCRIPTION
-request.body.email
-request.body.password
+```app.post('/auth', function(request, response) {});``` 
+
+HTTP POST parameter <br />
+
+OBJECT - DESCRIPTION <br />
+```request.body.email```<br />
+```request.body.password```<br />
 
 Insert Data
+Inserts new admin details in a form, and posts the request to mongodb, ```app.post('/insertData', function(request,response){});```
 HTTP POST request parameter
+```
+var item = {
+    firstname:request.body.firstname,
+    lastname:request.body.lastname,
+    password:request.body.password,
+    email:request.body.email,
+    role:request.body.role,
+    actions:request.body.actions 
+}
+```
 
 View Data - Management
+Used to retrieve data from the database of current admins using query,<br />
+```
+  const collection = client.db("loginlist").collection("adminlist");
+  var cursor = collection.find();				
+  cursor.forEach(function(document,error){});
+```
+It renders the user-list.ejs file, allows to post an insert new admin request.
 HTTP GET request
 
+
+
 View Data - Non-Admin
+Used to retrieve data from the database of current admins using query,<br />
+```
+  const collection = client.db("loginlist").collection("adminlist");
+  var cursor = collection.find();				
+  cursor.forEach(function(document,error){});
+  ```
 HTTP GET request
 
 
