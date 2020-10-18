@@ -6,8 +6,8 @@ super admin credentials<br />
   +  email : admin@admin.com<br />
   +  password : admin<br />
 Other admin credentials<br />
-  +  -email : test@test.com<br />
-  +  -password : test<br />
+  +  email : test@test.com<br />
+  +  password : test<br />
 
 Database - MongoDB<br />
 
