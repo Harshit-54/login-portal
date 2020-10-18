@@ -36,10 +36,11 @@ OBJECT - DESCRIPTION <br />
 ```request.body.password```<br />
 
 <H3>Insert Data</H3> <br />
-Inserts new admin details in a form, and posts the request to mongodb, ```app.post('/insertData', function(request,response){});```
+Inserts new admin details in a form, and posts the request to mongodb, 
+```app.post('/insertData', function(request,response){});```
 HTTP POST request parameter
-```
-var item = {
+
+```var item = {
     firstname:request.body.firstname,
     lastname:request.body.lastname,
     password:request.body.password,
@@ -48,8 +49,9 @@ var item = {
     actions:request.body.actions 
 }
 ```
+
 <H3>View Data - Management</H3> <br />
-Used to retrieve data from the database of current admins using query,<br />
+Used to retrieve data from the database of current admins using query.<br />
 ```
   const collection = client.db("loginlist").collection("adminlist");
   var cursor = collection.find();				
