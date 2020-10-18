@@ -26,47 +26,46 @@ document_json = {
 
 <H2>API features</H2>
 
-<H3>Authentication</H3><br />
+<H3>Authentication</H3>
 This authenticates the user, using post method,
-```app.post('/auth', function(request, response) {});``` 
+app.post('/auth', function(request, response) {}); <br />
 
 HTTP POST parameter <br />
 OBJECT - DESCRIPTION <br />
-```request.body.email```<br />
-```request.body.password```<br />
+request.body.email<br />
+request.body.password<br />
 
 <H3>Insert Data</H3> <br />
-Inserts new admin details in a form, and posts the request to mongodb, 
-```app.post('/insertData', function(request,response){});```
-HTTP POST request parameter
+Inserts new admin details in a form, and posts the request to mongodb, app.post('/insertData', function(request,response){}); <br />
+HTTP POST request parameter<br />
 
-```var item = {
-    firstname:request.body.firstname,
-    lastname:request.body.lastname,
-    password:request.body.password,
-    email:request.body.email,
-    role:request.body.role,
-    actions:request.body.actions 
-}
-```
+var item = {<br />
+    firstname:request.body.firstname,<br />
+    lastname:request.body.lastname,<br />
+    password:request.body.password,<br />
+    email:request.body.email,<br />
+    role:request.body.role,<br />
+    actions:request.body.actions <br />
+}<br />
 
-<H3>View Data - Management</H3> <br />
+
+<H3>View Data - Management</H3> 
 Used to retrieve data from the database of current admins using query.<br />
-```
-  const collection = client.db("loginlist").collection("adminlist");
-  var cursor = collection.find();				
-  cursor.forEach(function(document,error){});
-```
-It renders the user-list.ejs file, allows to post an insert new admin request.
+
+  const collection = client.db("loginlist").collection("adminlist");<br />
+  var cursor = collection.find();				<br />
+  cursor.forEach(function(document,error){});<br />
+
+It renders the user-list.ejs file, allows to post an insert new admin request.<br />
 
 
 <H3>View Data - Non-Admin</H3><br />
 Used to retrieve data from the database of current admins using query,<br />
-```
-  const collection = client.db("loginlist").collection("adminlist");
-  var cursor = collection.find();				
+
+  const collection = client.db("loginlist").collection("adminlist");<br />
+  var cursor = collection.find();				<br />
   cursor.forEach(function(document,error){});
-  ```
+ <br />
 It renders the user-list-view.ejs file
 
 
