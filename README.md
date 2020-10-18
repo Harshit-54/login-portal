@@ -40,14 +40,17 @@ request.body.password
 Inserts new admin details in a form, and posts the request to mongodb, app.post('/insertData', function(request,response){}); <br />
 HTTP POST request parameter<br />
 
-var item = {<br />
-firstname:request.body.firstname,<br />
-lastname:request.body.lastname,<br />
-password:request.body.password,<br />
-email:request.body.email,<br />
-role:request.body.role,<br />
-actions:request.body.actions <br />
-}<br />
+
+```
+document_json = {
+  firstname : request.body.firstname,
+  lastname : request.body.lastname,
+  password : request.body.password,
+  email : request.body.email,
+  role : request.body.role,
+  actions : request.body.actions
+}
+```
 
 
 <H3>View Data - Management</H3> 
