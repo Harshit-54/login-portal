@@ -12,12 +12,13 @@ Other admin credentials<br />
 Database - MongoDB<br />
 
 Database schema <br />
-{<br />
-  +  firstname : string,<br />
-  +  lastname : string,<br />
-  +  password : string,<br />
-  +  email : string,<br />
-  +  role : string,<br />
-  +  actions : int32<br />
-}<br />
-
+```
+document_json = {
+  firstname : string,
+  lastname : string,
+  password : string,
+  email : string,
+  role : string,
+  actions : int32
+}
+```
