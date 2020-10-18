@@ -24,19 +24,18 @@ document_json = {
 ```
 <H1>API Documentations</H1>
 
-API features
+<H2>API features</H2>
 
-Authentication
+<H3>Authentication</H3><br />
 This authenticates the user, using post method,
 ```app.post('/auth', function(request, response) {});``` 
 
 HTTP POST parameter <br />
-
 OBJECT - DESCRIPTION <br />
 ```request.body.email```<br />
 ```request.body.password```<br />
 
-Insert Data
+<H3>Insert Data</H3> <br />
 Inserts new admin details in a form, and posts the request to mongodb, ```app.post('/insertData', function(request,response){});```
 HTTP POST request parameter
 ```
@@ -49,8 +48,7 @@ var item = {
     actions:request.body.actions 
 }
 ```
-
-View Data - Management
+<H3>View Data - Management</H3> <br />
 Used to retrieve data from the database of current admins using query,<br />
 ```
   const collection = client.db("loginlist").collection("adminlist");
@@ -58,18 +56,16 @@ Used to retrieve data from the database of current admins using query,<br />
   cursor.forEach(function(document,error){});
 ```
 It renders the user-list.ejs file, allows to post an insert new admin request.
-HTTP GET request
 
 
-
-View Data - Non-Admin
+<H3>View Data - Non-Admin</H3><br />
 Used to retrieve data from the database of current admins using query,<br />
 ```
   const collection = client.db("loginlist").collection("adminlist");
   var cursor = collection.find();				
   cursor.forEach(function(document,error){});
   ```
-HTTP GET request
+It renders the user-list-view.ejs file
 
 
 
