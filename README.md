@@ -22,3 +22,26 @@ document_json = {
   actions : <int32>
 }
 ```
+<H1>API Documentations</H1>
+
+API features
+
+Authentication
+This authenticates the user, using post method,
+```app.post('/auth', function(request, response) {});```
+HTTP POST request parameter
+OBJECT - DESCRIPTION
+request.body.email
+request.body.password
+
+Insert Data
+HTTP POST request parameter
+
+View Data - Management
+HTTP GET request
+
+View Data - Non-Admin
+HTTP GET request
+
+
+
